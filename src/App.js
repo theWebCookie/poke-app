@@ -28,13 +28,17 @@ const App = () => {
   return (
     <div className='App'>
       <div>
-        <p>List of pokemons</p>
+        <h1>List of pokemons</h1>
       </div>
       <div className='pokemons-container'>
         {allPoke.map((pokemon, index) => {
           return <PokeCard key={index} {...pokemon} />;
         })}
-        <button onClick={() => getPokemons()}>Load more pokemons</button>
+      </div>
+      <div className='footer'>
+        <button className='btn' onClick={() => getPokemons()}>
+          Load more pokemons
+        </button>
       </div>
     </div>
   );
